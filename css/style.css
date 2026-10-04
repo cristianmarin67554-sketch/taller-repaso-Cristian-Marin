@@ -3,8 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+--color-primario: #FF5A5F;
+--color-oscuro: #222222;
+--color-claro: #F7F7F7;
+--fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body {
+background-color: var(--color-claro);
+color: var(--color-oscuro);
+transition: background-color 0.4s ease, color 0.4s ease;
+}
+ss {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
@@ -69,4 +79,31 @@ footer {
     background-color: hsl(0, 79%, 25%);
     color: white;
     padding: 20px;
+}
+/* Estilos para el botón superior */
+.btn-tema {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-tema:hover {
+  background-color: white;
+  color: var(--color-oscuro);
+}
+
+/* LA MAGIA DEL MODO OSCURO */
+body.dark-theme {
+  --color-claro: #121212;
+  --color-oscuro: #E0E0E0;
+}
+
+body.dark-theme .card {
+  background-color: #1E1E1E;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
